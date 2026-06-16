@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jagdhütte „Zum großen Herrgott"</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦌</text></svg>" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#top">🦌 Zum großen Herrgott</a>
+      <ul class="nav-links">
+        <li><a href="#ueber">Über uns</a></li>
+        <li><a href="#zimmer">Zimmer</a></li>
+        <li><a href="#buchung">Buchung</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-content">
+      <h1>Jagdhütte<br>„Zum großen Herrgott"</h1>
+      <p>Ursprüngliche Natur · Echte Ruhe · Persönliche Gastfreundschaft</p>
+      <a href="#buchung" class="btn btn-primary">Jetzt buchen</a>
+    </div>
+  </header>
+
+  <section class="section" id="ueber">
+    <div class="container">
+      <h2>Willkommen</h2>
+      <p>Die Jagdhütte „Zum großen Herrgott" liegt inmitten unberührter Natur und bietet
+         eine authentische Unterkunft abseits des Massentourismus. Als Gast werden Sie
+         persönlich vom Betreiber empfangen und betreut.</p>
+      <p>Ideal für Wanderer, Jäger, Naturliebhaber und alle, die echte Stille suchen.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="zimmer">
+    <div class="container">
+      <h2>Unsere Zimmer</h2>
+      <div class="zimmer-grid">
+        <div class="zimmer-card">
+          <div class="zimmer-icon">🛏🛏</div>
+          <h3>Doppelzimmer</h3>
+          <p>Gemütliches Doppelzimmer für zwei Personen mit Blick in die Natur.</p>
+          <ul class="zimmer-features">
+            <li>2 Personen</li>
+            <li>Frühstück auf Anfrage</li>
+            <li>Gemeinsames Bad</li>
+          </ul>
+        </div>
+        <div class="zimmer-card">
+          <div class="zimmer-icon">🛏</div>
+          <h3>Einzelzimmer</h3>
+          <p>Ruhiges Einzelzimmer – ideal für Alleinreisende und Naturliebhaber.</p>
+          <ul class="zimmer-features">
+            <li>1 Person</li>
+            <li>Frühstück auf Anfrage</li>
+            <li>Gemeinsames Bad</li>
+          </ul>
+        </div>
+      </div>
+      <p class="hinweis">
+        ⚠️ <strong>Hinweis:</strong> Eine Buchung ist nur möglich, wenn der Betreiber anwesend ist.
+        Verfügbare Zeiträume werden im Buchungskalender angezeigt.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="buchung">
+    <div class="container">
+      <h2>Buchung</h2>
+      <p>Wählen Sie Zimmer und Zeitraum – Sie erhalten sofort eine Bestätigung per E-Mail
+         mit Kalendereintrag.</p>
+
+      <div class="booking-wrapper">
+
+        <div class="step">
+          <h3><span class="step-num">1</span> Zimmer wählen</h3>
+          <div class="room-select-grid">
+            <label class="room-option" id="opt-doppel">
+              <input type="radio" name="zimmer" value="Doppelzimmer" />
+              <span>🛏🛏 Doppelzimmer</span>
+            </label>
+            <label class="room-option" id="opt-einzel">
+              <input type="radio" name="zimmer" value="Einzelzimmer" />
+              <span>🛏 Einzelzimmer</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="step">
+          <h3><span class="step-num">2</span> Zeitraum wählen</h3>
+          <div class="date-inputs">
+            <div class="field-group">
+              <label for="arrival">Anreise</label>
+              <input type="date" id="arrival" />
+            </div>
+            <div class="field-group">
+              <label for="departure">Abreise</label>
+              <input type="date" id="departure" />
+            </div>
+          </div>
+          <div id="availability-msg" class="availability-msg" style="display:none;"></div>
+        </div>
+
+        <div class="step">
+          <h3><span class="step-num">3</span> Ihre Daten</h3>
+          <div class="form-grid">
+            <div class="field-group">
+              <label for="vorname">Vorname *</label>
+              <input type="text" id="vorname" placeholder="Max" />
+            </div>
+            <div class="field-group">
+              <label for="nachname">Nachname *</label>
+              <input type="text" id="nachname" placeholder="Mustermann" />
+            </div>
+            <div class="field-group full-width">
+              <label for="email">E-Mail-Adresse *</label>
+              <input type="email" id="email" placeholder="max@beispiel.de" />
+            </div>
+            <div class="field-group full-width">
+              <label for="telefon">Telefon (optional)</label>
+              <input type="tel" id="telefon" placeholder="+49 ..." />
+            </div>
+            <div class="field-group full-width">
+              <label for="nachricht">Nachricht / Besondere Wünsche</label>
+              <textarea id="nachricht" rows="3" placeholder="z.B. Frühstück gewünscht, Anreisezeit ..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <label class="checkbox-label">
+            <input type="checkbox" id="datenschutz" />
+            Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme zu. *
+          </label>
+          <button class="btn btn-primary btn-large" id="submit-btn" onclick="submitBooking()">
+            Buchung verbindlich absenden
+          </button>
+          <div id="form-error" class="form-error" style="display:none;"></div>
+        </div>
+
+      </div>
+
+      <div id="success-overlay" class="success-overlay" style="display:none;">
+        <div class="success-box">
+          <div class="success-icon">✅</div>
+          <h3>Buchung bestätigt!</h3>
+          <p id="success-text"></p>
+          <p>Sie erhalten in Kürze eine Bestätigungs-E-Mail mit Kalendereintrag.</p>
+          <button class="btn btn-outline" onclick="resetForm()">Neue Buchung</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="kontakt">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p>Bei Fragen stehen wir Ihnen gerne zur Verfügung:</p>
+      <div class="kontakt-info">
+        <div>📧 <a href="mailto:IHRE_EMAIL@gmail.com">IHRE_EMAIL@gmail.com</a></div>
+        <div>📞 <a href="tel:+49XXXXXXXXXX">+49 XXX XXXXXXX</a></div>
+        <div>📍 Musterstraße 1, 00000 Musterort</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2024 Jagdhütte „Zum großen Herrgott" &nbsp;|&nbsp;
+        <a href="impressum.html">Impressum</a> &nbsp;|&nbsp;
+        <a href="datenschutz.html">Datenschutz</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/booking.js"></script>
+</body>
+</html>
